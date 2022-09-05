@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>ToDo</title>
+</head>
+<body>
+  <div class="header-container">
+    <header><h1>ToDo</h1></header> <span><i class="fa-solid fa-bars task-button"></i></span>
+  </div>
+  <div class="all-tasks-container">
+    <h1>All Tasks</h1>
+    <i class="fa-regular fa-plus task-button"> <span>Add a Task</span></i> 
+    <form id="task-form" hidden>
+      <input type="text" placeholder="Add a task">
+    </form>
+  </div>
+  <div class="grid-container">
+    <h1>Home</h1>
+    <hr>
+    <div class="child all-tasks">All Tasks</div>
+    <div class="child today">Today</div>
+    <div class="child this-week">This Week</div>
+    <br>
+    <h1>Projects</h1>
+    <hr>
+    <ul class="project-container"></ul>
+    <i class="fa-regular fa-plus project-button"> <span>Add a Project</span></i> 
+    <br>
+    <form class="project-form" hidden>
+      <input type="text" id="project-input" placeholder="Project Name...">
+      <button class="submit">Submit</button>
+      <button class="cancel">Cancel</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
