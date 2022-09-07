@@ -13,14 +13,38 @@ body {
   --child-font: 1.3rem;
 }
 
-
 .all-tasks-container {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 2rem 0 9rem 0;
 }
+
+.high-priority, .medium-priority, .low-priority {
+  height: 2rem;
+  width: 4rem;
+  border: none;
+}
+
+.high-priority {
+  background-color: rgba(255, 0, 0, .4);
+}
+
+.low-priority {
+  background: rgba(0, 255, 0, .4);
+}
+
+#task-input {
+  height: 2rem;
+  width: 20rem;
+}
+
+#date-input {
+  height: 2rem;
+}
+
 
 .grid-container {
   /* display: none; */
@@ -86,5 +110,13 @@ li {
   
   .task-bar {
     order: -1;
+  }
+
+  .all-tasks-container {
+    display: flex;
+  }
+
+  .mobile-show-tasks {
+    display: none;
   }
 }

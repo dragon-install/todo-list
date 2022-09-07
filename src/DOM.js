@@ -1,10 +1,14 @@
+import Todo from "./Constructor"
+
 const projectForm = document.querySelector('.project-form')
 const taskForm = document.querySelector('#task-form')
-const addProjectButton = document.querySelector('.project-button')
+const addProjectButton = document.querySelector('.add-project-button')
+const addProjectButton1 = document.querySelector('.add-project-button')
 const addTaskButton = document.querySelector('.task-button')
 const projectUl = document.querySelector('ul')
-const hamburgerMenuButton = document.querySelector('.fa-bars')
+const mobileTasksButton = document.querySelector('.mobile-show-tasks')
 const gridContainer = document.querySelector('.grid-container')
+const tasksContainer = document.querySelector('.all-tasks-container')
 
 function showProjectForm() {
   addProjectButton.addEventListener('click', () => {
@@ -13,18 +17,6 @@ function showProjectForm() {
     } else {
       return
     }
-  })
-}
-
-function showTaskForm() {
-  addTaskButton.addEventListener('click', () => {
-    // if(taskForm.style.display === 'none') {
-    //   console.log('ok')
-    //   taskForm.style.display = 'block'
-    // } else {
-    //   return
-    // }
-    console.log('ok')
   })
 }
     
@@ -51,16 +43,25 @@ function cancelProject() {
 }
 
 function showHiddenContent() {
-  hamburgerMenuButton.addEventListener('click', () => {
-    if(gridContainer.style.display == 'none') {
-      gridContainer.style.display = 'grid'
-    } else {
-      gridContainer.style.display = 'none'
+  mobileTasksButton.addEventListener('click', () => {
+    if(tasksContainer.style.display != 'grid') {
+     tasksContainer.style.display = 'grid'
+    } else if(tasksContainer.style.display === 'grid') {
+      tasksContainer.style.display = 'none'
     }
+
   })
 }
 
+addProjectButton1.addEventListener('click', () => {
+  if(projectForm.style.display !== 'grid') {
+    projectForm.style.display = 'grid'
+  } else {
+    projectForm.style.display = 'hidden'
+  }
+})
 
 
-export { showProjectForm, showTaskForm, submitProject, cancelProject, showHiddenContent }
+
+export { showProjectForm, submitProject, cancelProject, showHiddenContent }
 
