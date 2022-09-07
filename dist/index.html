@@ -12,30 +12,45 @@
   <div class="header-container">
     <header><h1>ToDo</h1></header> <span><i class="fa-solid fa-bars task-button"></i></span>
   </div>
-  <div class="all-tasks-container">
+
+  <!-- <div class="all-tasks-container">
     <h1>All Tasks</h1>
-    <i class="fa-regular fa-plus task-button"> <span>Add a Task</span></i> 
-    <form id="task-form" hidden>
       <input type="text" placeholder="Add a task">
-    </form>
-  </div>
+      <button class="add-task-button">Add the Task</button>
+  </div> -->
+
   <div class="grid-container">
-    <h1>Home</h1>
-    <hr>
-    <div class="child all-tasks">All Tasks</div>
-    <div class="child today">Today</div>
-    <div class="child this-week">This Week</div>
-    <br>
-    <h1>Projects</h1>
-    <hr>
-    <ul class="project-container"></ul>
-    <i class="fa-regular fa-plus project-button"> <span>Add a Project</span></i> 
-    <br>
-    <form class="project-form" hidden>
-      <input type="text" id="project-input" placeholder="Project Name...">
-      <button class="submit">Submit</button>
-      <button class="cancel">Cancel</button>
-    </form>
+
+    <div class="all-tasks-container">
+      <h1>All Tasks</h1>
+        <input type="text" id="task-input" placeholder="Add a task">
+        <input type="date" id="date">
+        <div class="button-priority-container">
+          <button class="high-priority">High</button>
+          <button class="medium-priority">Medium</button>
+          <button class="low-priority">Low</button>
+        </div>
+        <button class="add-task-button">Add the Task</button>
+    </div>
+
+    <section class="task-bar">
+      <h1>Home</h1>
+      <hr>
+      <div class="child all-tasks">All Tasks</div>
+      <div class="child today">Today</div>
+      <div class="child this-week">This Week</div>
+      <br>
+      <h1>Projects</h1>
+      <hr>
+      <ul class="project-container"></ul>
+      <i class="fa-regular fa-plus project-button"> <span>Add a Project</span></i> 
+      <br>
+      <form class="project-form" hidden>
+        <input type="text" id="project-input" placeholder="Project Name...">
+        <button class="submit">Submit</button>
+        <button class="cancel">Cancel</button>
+      </form>
+    </section>
   </div>
   <script src="main.js"></script>
 </body>

@@ -1,5 +1,5 @@
 const projectForm = document.querySelector('.project-form')
-const taskForm = document.querySelector('.task-form')
+const taskForm = document.querySelector('#task-form')
 const addProjectButton = document.querySelector('.project-button')
 const addTaskButton = document.querySelector('.task-button')
 const projectUl = document.querySelector('ul')
@@ -18,14 +18,16 @@ function showProjectForm() {
 
 function showTaskForm() {
   addTaskButton.addEventListener('click', () => {
-    if(taskForm.style.display === 'hidden') {
-      console.log('ok')
-      taskForm.style.display = 'block'
-    } else {
-      return
-    }
+    // if(taskForm.style.display === 'none') {
+    //   console.log('ok')
+    //   taskForm.style.display = 'block'
+    // } else {
+    //   return
+    // }
+    console.log('ok')
   })
 }
+    
 
 function submitProject() {
   document.body.addEventListener('click', e => {
@@ -61,3 +63,4 @@ function showHiddenContent() {
 
 
 export { showProjectForm, showTaskForm, submitProject, cancelProject, showHiddenContent }
+
